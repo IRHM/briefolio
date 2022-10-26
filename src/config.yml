@@ -1,0 +1,39 @@
+Params:
+  name: "Mylong Name"
+  role: "Software Engineer"
+  email: "email2@myemail.me"
+
+  projects:
+    - name: "Casterr"
+      desc: "a recorder"
+      points:
+        - "first big project"
+      tech:
+        - TypeScript
+        - Vue
+        - Node
+
+    - name: "LabMaker"
+      desc: "a clean and seamless"
+      points:
+        - "first big project"
+
+  experience:
+    - time: Jan 2020 - Present
+      role: "Electron Developer"
+      company: "random company"
+      points:
+        - "random point"
+        - "random point"
+        - "random point"
+        - "random point"
+
+    - time: Jun 2019 - Dec 2019
+      role: "Software Engineer"
+      company: "random company"
+      desc: "A job where i did things and made cool things n stuff"
+      points:
+        - "random point"
+        - "random point"
+        - "random point"
+        - "random point"
