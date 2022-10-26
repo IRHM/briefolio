@@ -1,0 +1,7 @@
+<nav>
+  <div title="The man behind simplistic design.">{{ $.Param "name" }}</div>
+  <div>
+    <span title="or Full Stack Developer, whatever you prefer.">{{ $.Param "role" }}</span>
+    <a href="mailto:{{ .Site.Params.email }}">{{ $.Param "email" }}</a>
+  </div>
+</nav>

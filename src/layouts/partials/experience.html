@@ -1,0 +1,28 @@
+{{ with $.Param "experience" }}
+  <h1>#EXPERIENCE</h1>
+
+  <ul class="timeline">
+    {{ range . }}
+      <li>
+        <span class="time"><span>{{ .time }}</span></span>
+        <h3>{{ .role }}</h3>
+        <i>{{ .company }}</i>
+        <div>
+          <!-- Quick Description -->
+          {{ if .desc }}
+            <p>{{ .desc }}</p>
+          {{ end }}
+
+          <!-- Key Takeaways -->
+          {{ if .points }}
+            <ul>
+              {{ range .points }}
+                <li>{{ . }}</li>
+              {{ end }}
+            </ul>
+          {{ end }}
+        </div>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}

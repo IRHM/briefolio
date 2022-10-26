@@ -1,101 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>change me l8r dont forget the favicon</title>
-    <link rel="stylesheet" href="https://unpkg.com/blaze-slider@1.7.1/dist/blaze.css" />
-    <script src="https://unpkg.com/blaze-slider@1.7.1/dist/blaze-slider.min.js" defer></script>
-    <link rel="stylesheet" href="/main.css" />
-    <script src="/index.js" defer></script>
+    {{ partial "header.html" . }}
   </head>
   <body>
     <div class="content">
       <div class="wrapper">
-        <nav>
-          <div title="The man behind simplistic design.">{{ $.Param "name" }}</div>
-          <div>
-            <span title="or Full Stack Developer, whatever you prefer.">{{ $.Param "role" }}</span>
-            <a href="mailto:{{ .Site.Params.email }}">{{ $.Param "email" }}</a>
-          </div>
-        </nav>
+        {{ partial "nav.html" . }}
 
         <!-- Projects Section -->
-        {{ if $.Param "projects" }}
-        <h1>#PROJECTS</h1>
-
-        <div class="slider-container">
-          <div class="blaze-slider">
-            <div class="blaze-container">
-              <div class="blaze-track-container">
-                <div class="blaze-track">
-                  {{ range $.Param "projects" }}
-                  <div class="project">
-                    <span>{{ .name }}</span>
-                    <p>{{ .desc }}</p>
-
-                    <!-- Project key points -->
-                    {{ if .points }}
-                    <ul class="key">
-                      {{ range .points }}
-                      <li>{{ . }}</li>
-                      {{ end }}
-                    </ul>
-                    {{ end }}
-
-                    <!-- Tech List -->
-                    {{ if .tech }}
-                    <ul class="tech">
-                      {{ range .tech }}
-                      <li>{{ . }}</li>
-                      {{ end }}
-                    </ul>
-                    {{ end }}
-                  </div>
-                  {{ end }}
-                </div>
-              </div>
-
-              <div class="blaze-nav">
-                <button class="blaze-prev arrow" aria-label="Go to previous slide"></button>
-                <div class="blaze-pagination"></div>
-                <button class="blaze-next arrow" aria-label="Go to next slide"></button>
-              </div>
-            </div>
-          </div>
-        </div>
-        {{ end }}
+        {{ partial "projects.html" . }}
 
         <!-- Experience Section -->
-        {{ if $.Param "experience" }}
-        <h1>#EXPERIENCE</h1>
-
-        <ul class="timeline">
-          {{ range $.Param "experience" }}
-          <li>
-            <span class="time"><span>{{ .time }}</span></span>
-            <h3>{{ .role }}</h3>
-            <i>{{ .company }}</i>
-            <div>
-              <!-- Quick Description -->
-              {{ if .desc }}
-              <p>{{ .desc }}</p>
-              {{ end }}
-
-              <!-- Key Takeaways -->
-              {{ if .points }}
-              <ul>
-                {{ range .points }}
-                <li>{{ . }}</li>
-                {{ end }}
-              </ul>
-              {{ end }}
-            </div>
-          </li>
-          {{ end }}
-        </ul>
-        {{ end }}
+        {{ partial "experience.html" . }}
       </div>
     </div>
   </body>

@@ -1,0 +1,44 @@
+{{ with $.Param "projects" }}
+  <h1>#PROJECTS</h1>
+
+  <div class="slider-container">
+    <div class="blaze-slider">
+      <div class="blaze-container">
+        <div class="blaze-track-container">
+          <div class="blaze-track">
+            {{ range . }}
+              <div class="project">
+                <span>{{ .name }}</span>
+                <p>{{ .desc }}</p>
+
+                <!-- Project key points -->
+                {{ if .points }}
+                  <ul class="key">
+                    {{ range .points }}
+                      <li>{{ . }}</li>
+                    {{ end }}
+                  </ul>
+                {{ end }}
+
+                <!-- Tech List -->
+                {{ if .tech }}
+                  <ul class="tech">
+                    {{ range .tech }}
+                      <li>{{ . }}</li>
+                    {{ end }}
+                  </ul>
+                {{ end }}
+              </div>
+            {{ end }}
+          </div>
+        </div>
+
+        <div class="blaze-nav">
+          <button class="blaze-prev arrow" aria-label="Go to previous slide"></button>
+          <div class="blaze-pagination"></div>
+          <button class="blaze-next arrow" aria-label="Go to next slide"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}
