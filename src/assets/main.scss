@@ -20,7 +20,7 @@ body {
   justify-content: center;
   overflow: hidden;
 
-  .wrapper > * {
+  .wrapper {
     width: 450px;
   }
 
@@ -43,11 +43,16 @@ nav {
   div:nth-child(2) {
     display: flex;
     gap: 20px;
+    font-weight: 500;
   }
 
   a {
     color: white;
   }
+}
+
+p.summary {
+  margin-top: 10px;
 }
 
 .slider-container {

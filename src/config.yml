@@ -1,9 +1,12 @@
-Title: "Other Name's Portfolio"
+title: "Other Name's Portfolio"
+languageCode: en
+baseURL: "https://example.me"
 
 Params:
   name: "Mylong Name"
   role: "Software Engineer"
   email: "email2@myemail.me"
+  desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta debitis reiciendis quas ex in enim nihil, a harum excepturi maiores placeat, deserunt voluptatem perspiciatis inventore. At eius assumenda temporibus perferendis."
 
   projects:
     - name: "Casterr"

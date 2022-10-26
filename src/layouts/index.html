@@ -8,10 +8,15 @@
       <div class="wrapper">
         {{ partial "nav.html" . }}
 
-        <!-- Projects Section -->
+        <!-- Summary -->
+        {{ with $.Param "desc" }}
+          <p class="summary">{{ . }}</p>
+        {{ end }}
+
+        <!-- Projects -->
         {{ partial "projects.html" . }}
 
-        <!-- Experience Section -->
+        <!-- Experience -->
         {{ partial "experience.html" . }}
       </div>
     </div>

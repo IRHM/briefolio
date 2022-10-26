@@ -1,15 +1,36 @@
-<title>
-  {{ with .Title }}
-    {{ . }}
-  {{ else }}
-    {{ $.Param "name" }}'s Portfolio
-  {{ end }}
-</title>
+{{ $title := "" }}
+{{ with .Title }}
+    {{ $title = . }}
+{{ else }}
+  {{ $title = printf "%s%s" ($.Param "name") "'s Portfolio" }}
+{{ end }}
+
+<title>{{ $title }}</title>
+
+{{ $desc := .Site.Params.desc | truncate 150 }}
 
 <!-- Meta tags -->
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="keywords" content="portfolio,cv,resume,{{ .Site.Params.name }}" />
+<meta name="description" content="{{ $desc }}" />
+<meta name="subject" content="{{ .Site.Params.name }}'s portfolio" />
+<meta name="language" content="en" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Site.BaseURL }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:image" content="">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{ .Site.BaseURL }}">
+<meta property="twitter:title" content="{{ $title }}">
+<meta property="twitter:description" content="{{ $desc }}">
+<meta property="twitter:image" content="">
 
 <!-- Blaze Slider and its default css -->
 <link rel="stylesheet" href="https://unpkg.com/blaze-slider@1.7.1/dist/blaze.css" />
