@@ -15,6 +15,11 @@
 <link rel="stylesheet" href="https://unpkg.com/blaze-slider@1.7.1/dist/blaze.css" />
 <script src="https://unpkg.com/blaze-slider@1.7.1/dist/blaze-slider.min.js" defer></script>
 
-<!-- Our JS and CSS -->
-<link rel="stylesheet" href="/main.css" />
-<script src="/index.js" defer></script>
+<!-- Our CSS minified -->
+{{ $sass := resources.Get "main.scss" }}
+{{ $style := $sass | resources.ToCSS | minify }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
+
+<!-- Our JS minified -->
+{{ $js := resources.Get "main.js" | js.Build "main.js" | minify }}
+<script src="{{ $js.Permalink }}" defer></script>

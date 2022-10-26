@@ -39,3 +39,9 @@ Params:
         - "random point"
         - "random point"
         - "random point"
+
+publishDir: ./../public
+enableRobotsTXT: true
+
+minify:
+  minifyOutput: true
