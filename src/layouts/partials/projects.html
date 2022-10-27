@@ -8,7 +8,12 @@
           <div class="blaze-track">
             {{ range . }}
               <div class="project">
-                <span>{{ .name }}</span>
+                {{ if .url }}
+                  <a href="{{ .url }}" target="_blank">{{ .name }}</a>
+                {{ else }}
+                  <span>{{ .name }}</span>
+                {{ end }}
+
                 <p>{{ .desc }}</p>
 
                 <!-- Project key points -->

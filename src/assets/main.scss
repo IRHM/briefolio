@@ -164,6 +164,17 @@ p.summary {
     font-weight: bold;
   }
 
+  a {
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 250ms;
+  }
+
+  a:hover {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
   ul.key {
     margin-left: 20px;
   }

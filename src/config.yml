@@ -10,6 +10,7 @@ Params:
 
   projects:
     - name: "Casterr"
+      url: https://casterr.sbond.co
       desc: "a recorder"
       points:
         - "first big project"
