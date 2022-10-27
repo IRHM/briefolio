@@ -8,8 +8,10 @@
 
 /* linear-gradient(to top, #28759b 30%, #021022) */
 body {
+  min-height: 100vh;
   color: white;
   background-color: #373737;
+  background: linear-gradient(to bottom, #292828, #373737);
   font-family: "Source Code Pro", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size-adjust: 0.7;
 }
@@ -186,31 +188,31 @@ p.summary {
 /* tech colors */
 
 .tech {
-  .ts {
+  .TypeScript {
     background-color: #2c82c9;
   }
 
-  .vue {
+  .Vue {
     background-color: #2cc990;
   }
 
-  .node {
+  .Node {
     background-color: #6cc24a;
   }
 
-  .go {
+  .GoLang {
     background-color: #79d4fd;
   }
 
-  .react {
+  .React {
     background-color: #61dafb;
   }
 
-  .nestjs {
+  .NestJS {
     background-color: #ea2845;
   }
 
-  .prisma {
+  .Prisma {
     background-color: #2d3748;
   }
 }
