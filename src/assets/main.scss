@@ -164,23 +164,26 @@ p.summary {
     font-weight: bold;
   }
 
-  ul {
-    &.key {
-      margin-left: 20px;
+  ul.key {
+    margin-left: 20px;
+  }
+
+  ul.tech {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: auto;
+    gap: 15px;
+    list-style: none;
+
+    @media screen and (max-width: 475px) {
+      flex-flow: column;
+      gap: 5px;
     }
 
-    &.tech {
-      display: flex;
-      flex-flow: row;
-      margin-top: auto;
-      gap: 15px;
-      list-style: none;
-
-      li {
-        padding: 3px 8px;
-        border: 2px solid white;
-        border-radius: 8px;
-      }
+    li {
+      padding: 3px 8px;
+      border: 2px solid white;
+      border-radius: 8px;
     }
   }
 }
@@ -232,6 +235,7 @@ ul.timeline {
     width: 2px;
     height: 100%;
     z-index: 400;
+    margin-top: 4px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 15px;
   }
@@ -245,6 +249,7 @@ ul.timeline {
     width: 20px;
     height: 20px;
     z-index: 400;
+    margin-top: 4px;
     background-color: #373737;
     border-radius: 50%;
     border: 3px solid white;

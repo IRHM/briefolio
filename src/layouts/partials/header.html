@@ -1,6 +1,6 @@
 {{ $title := "" }}
 {{ with .Title }}
-    {{ $title = . }}
+  {{ $title = . }}
 {{ else }}
   {{ $title = printf "%s%s" ($.Param "name") "'s Portfolio" }}
 {{ end }}
