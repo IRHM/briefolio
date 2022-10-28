@@ -37,8 +37,8 @@
 <!-- Our CSS minified -->
 {{ $sass := resources.Get "main.scss" }}
 {{ $style := $sass | resources.ToCSS | minify }}
-<link rel="stylesheet" href="{{ $style.Permalink }}">
+<link rel="stylesheet" href="{{ $style.Permalink }}?v=2">
 
 <!-- Our JS minified -->
 {{ $js := resources.Get "main.js" | js.Build "main.js" | minify }}
-<script src="{{ $js.Permalink }}" defer></script>
+<script src="{{ $js.Permalink }}?v=2" defer></script>
