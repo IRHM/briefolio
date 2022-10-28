@@ -32,10 +32,6 @@
 <meta property="twitter:description" content="{{ $desc }}">
 <meta property="twitter:image" content="">
 
-<!-- Blaze Slider and its default css -->
-<link rel="stylesheet" href="https://unpkg.com/blaze-slider@1.7.1/dist/blaze.css" />
-<script src="https://unpkg.com/blaze-slider@1.7.1/dist/blaze-slider.min.js" defer></script>
-
 <!-- Our CSS minified -->
 {{ $sass := resources.Get "main.scss" }}
 {{ $style := $sass | resources.ToCSS | minify }}

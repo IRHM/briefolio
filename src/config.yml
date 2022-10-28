@@ -1,3 +1,6 @@
+# Example configuration file.
+# Use it as a guide to configuring the portfolio.
+
 title: "Other Name's Portfolio"
 languageCode: en
 baseURL: "https://example.me"
@@ -11,7 +14,7 @@ Params:
   projects:
     - name: "Casterr"
       url: https://casterr.sbond.co
-      desc: "a recorder"
+      desc: "a recorder that is a recorder and stuff and does cool stuff because it is a recorder."
       points:
         - "first big project"
       tech:
@@ -46,6 +49,8 @@ Params:
 
 publishDir: ./../public
 enableRobotsTXT: true
-
+disableKinds:
+  - taxonomy
+  - term
 minify:
   minifyOutput: true

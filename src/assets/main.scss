@@ -72,24 +72,18 @@ p.summary {
   width: 100%;
 }
 
-/* .slider-container::before {
-  background: linear-gradient(to right, #0000 10%, #373737);
-  content: "";
-  display: block;
-  position: absolute;
-  height: 100%;
-  width: 300px;
-  right: 0;
-  top: 0;
-  z-index: 9999;
-} */
-
 .blaze-slider {
   margin: 0 30px;
   cursor: grab;
 
   .blaze-track-container {
     overflow: visible !important;
+  }
+
+  &.start .blaze-prev,
+  &.end .blaze-next {
+    opacity: 0.8;
+    pointer-events: none;
   }
 
   .blaze-nav {
@@ -148,6 +142,19 @@ p.summary {
         background-color: white;
       }
     }
+  }
+}
+
+.blaze-slider.mobile {
+  margin: 0;
+  cursor: default;
+
+  .blaze-track {
+    flex-flow: column !important;
+  }
+
+  .blaze-nav {
+    display: none;
   }
 }
 
