@@ -150,7 +150,9 @@ p.summary {
   cursor: default;
 
   .blaze-track {
+    display: flex;
     flex-flow: column !important;
+    gap: 25px;
   }
 
   .blaze-nav {
