@@ -273,6 +273,22 @@ ul.timeline {
     border: 3px solid white;
   }
 
+  @media screen and (max-width: 625px) {
+    &:before {
+      left: 0 !important;
+    }
+    & > li:before {
+      left: -11px !important;
+    }
+    & > li {
+      margin: 20px 0 0 0 !important;
+
+      .time {
+        margin-left: 10px;
+      }
+    }
+  }
+
   & > li {
     display: flex;
     flex-flow: column;
@@ -305,7 +321,7 @@ ul.timeline {
       gap: 6px;
 
       ul {
-        gap: 3px;
+        gap: 6px;
         margin-left: 20px;
       }
     }
